@@ -1,0 +1,34 @@
+*** How to Enable SSH on Ubuntu 20.04
+
+
+*** Enabling SSH on Ubuntu #
+
+
+$ sudo apt update
+$ sudo apt install openssh-server
+$ sudo systemctl status ssh
+$ sudo ufw allow ssh
+
+
+*** Change Your User Password
+
+$ sudo passwd parvez
+Enter new UNIX password: parvez
+Retype new UNIX password: parvez
+
+
+*** Connecting to the SSH Server #
+
+
+$ ifconfig
+$ ssh parvez@192.168.1.6
+yes
+password: parvez
+
+
+*** Disabling SSH on Ubuntu #
+
+$ sudo systemctl disable --now ssh
+
+- Later, to re-enable it, type
+$ sudo systemctl enable --now ssh
